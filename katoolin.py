@@ -3,9 +3,10 @@
 import os
 import sys, traceback
 
+from past.builtins import raw_input
 
 if os.getuid() != 0:
-	print "Sorry. This script requires sudo privledges"
+	print ("Sorry. This script requires sudo privileges")
 	sys.exit()
 def main():
 	try:
@@ -50,7 +51,7 @@ def main():
 					''')
 					repo = raw_input("\033[1;32mWhat do you want to do ?> \033[1;m")
 					if repo == "1":
-						cmd1 = os.system("apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6")
+						cmd1 = os.system("sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6")
 						cmd2 = os.system("echo '# Kali linux repositories | Added by Katoolin\ndeb http://http.kali.org/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list")
 					elif repo == "2":
 						cmd3 = os.system("apt-get update -m")
@@ -431,7 +432,8 @@ For more information , please visit : http://www.florian-diesch.de/software/clas
 11) eapmd5pass				27) redfang
 12) Fern Wifi Cracker			28) RTLSDR Scanner
 13) Ghost Phisher			29) Spooftooph
-14) GISKismet				30) Wifi Honey				31) Wifitap
+14) GISKismet				30) Wifi Honey
+15) -					31) Wifitap
 16) gr-scan				32) Wifite 
 
 0) Install all Wireless Attacks tools

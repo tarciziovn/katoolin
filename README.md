@@ -21,13 +21,15 @@ Note: I advertise through comments on some pull requests of the original project
 
 # Requirements
 - Python 2.7 (Compatibility to Python 3.0 is under progress)
-- An Ubuntu Linux family operating system
+- An Ubuntu Linux family operating system (tested on Ubuntu)
 
 # Installation
-- sudo su
-- git clone https://github.com/LionSec/katoolin.git && cp katoolin/katoolin.py /usr/bin/katoolin
-- chmod +x /usr/bin/katoolin
-- sudo katoolin 
+```
+sudo curl -Lo katoolin https://raw.githubusercontent.com/tarciziovn/katoolin/master/katoolin.py 
+sudo chmod +x katoolin
+sudo mv katoolin /usr/bin/katoolin
+sudo katoolin 
+```
 
 # Video
 https://www.youtube.com/watch?v=8VxCWVoZEEE
